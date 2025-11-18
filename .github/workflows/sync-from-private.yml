@@ -1,0 +1,60 @@
+name: Sync artifacts from private repo
+
+on:
+  # Tu peux ajuster la fréquence (ici: toutes les 5 minutes)
+  schedule:
+    - cron: "*/5 * * * *"
+  # Permet aussi de lancer à la main
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # pour pouvoir pousser sur le repo public
+
+    steps:
+      - name: Checkout release repo
+        uses: actions/checkout@v4
+
+      - name: Configure SSH for private repo
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PRIVATE_REPO_DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Clone private source repo
+        run: |
+          rm -rf source-repo
+          git clone git@github.com:myadion/c-stephanie-agrain-soundboard.git source-repo
+          ls -R source-repo
+
+      - name: Copy release artifacts
+        run: |
+          # On nettoie l'ancien contenu
+          rm -rf builds latest.json
+
+          # latest.json
+          cp source-repo/latest.json latest.json
+
+          # APK
+          mkdir -p builds
+          cp source-repo/builds/app-latest.apk builds/app-latest.apk
+
+          echo "===== Contenu du repo release après copie ====="
+          ls -R
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add .
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: sync artifacts from private repo"
+            git push
+          fi
