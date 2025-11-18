@@ -1,5 +1,7 @@
 {
   "version": "1.1.6",
-  "downloadUrl": "https://example.com/builds/soundboard-1.1.6.apk",
-  "notes": "Revenir aux timers avec affichage --/-- et ajout du manifeste distant."
+  "changelog": "- Revenir au comportement d’origine sur les timers : affichage `00:00 / --:--` tant que la piste n’a pas été jouée.\n- Ajout du manifeste `latest.json` pour alimenter la vérification de mise à jour.",
+  "downloadUrlAndroid": "https://example.com/builds/soundboard-1.1.6.apk",
+  "downloadUrlIos": "",
+  "generatedAt": "2025-11-18T17:57:38.861Z"
 }
