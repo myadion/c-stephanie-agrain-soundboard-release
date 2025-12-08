@@ -2,8 +2,8 @@ name: Sync artifacts from private repo
 
 on:
   # Tu peux ajuster la fréquence (ici: toutes les 5 minutes)
-  schedule:
-    - cron: "*/5 * * * *"
+  #schedule:
+   # - cron: "*/5 * * * *"
   # Permet aussi de lancer à la main
   workflow_dispatch:
 
