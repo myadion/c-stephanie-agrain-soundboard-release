@@ -1,7 +1,7 @@
 {
-  "version": "1.1.6",
-  "changelog": "- Revenir au comportement d’origine sur les timers : affichage `00:00 / --:--` tant que la piste n’a pas été jouée.\n- Ajout du manifeste `latest.json` pour alimenter la vérification de mise à jour.",
-  "downloadUrlAndroid": "https://example.com/builds/soundboard-1.1.6.apk",
+  "version": "1.1.7",
+  "changelog": "- Correctif du systeme de mise a jour (ouverture du lien de telechargement et bouton stable).\n- Nouveaux sons avec un delai de 2s avant chaque lecture pour eviter les declenchements brusques.",
+  "downloadUrlAndroid": "https://raw.githubusercontent.com/myadion/c-stephanie-agrain-soundboard-release/refs/heads/main/builds/app-latest.apk",
   "downloadUrlIos": "",
-  "generatedAt": "2025-11-18T17:57:38.861Z"
+  "generatedAt": "2025-12-09T13:12:52.490Z"
 }
