@@ -3,5 +3,5 @@
   "changelog": "- Correctif du systeme de mise a jour (ouverture du lien de telechargement et bouton stable).\n- Nouveaux sons avec un delai de 2s avant chaque lecture pour eviter les declenchements brusques.",
   "downloadUrlAndroid": "https://raw.githubusercontent.com/myadion/c-stephanie-agrain-soundboard-release/refs/heads/main/builds/app-latest.apk",
   "downloadUrlIos": "",
-  "generatedAt": "2025-12-09T13:12:52.490Z"
+  "generatedAt": "2025-12-09T13:21:39.075Z"
 }
