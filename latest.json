@@ -1,7 +1,7 @@
 {
-  "version": "1.1.8",
-  "changelog": "- Mise a jour des sons et de la configuration.",
+  "version": "1.1.9",
+  "changelog": "- Mise a jour des sons.",
   "downloadUrlAndroid": "https://raw.githubusercontent.com/myadion/c-stephanie-agrain-soundboard-release/refs/heads/main/builds/app-latest.apk",
   "downloadUrlIos": "",
-  "generatedAt": "2026-01-29T14:30:20.958Z"
+  "generatedAt": "2026-09-28T17:35:17.841Z"
 }
